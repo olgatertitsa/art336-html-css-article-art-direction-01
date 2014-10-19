@@ -16,6 +16,14 @@ $(function() {
 
 
 // bigtext.js
-if( 'querySelectorAll' in document ) {
-    $('#bigtext').bigtext();    
-}
+$(function() {
+    WebFont.load({
+        custom: {
+            families: ['Quicksand'], // font-family name
+            urls : ['css/main.css'] // URL to css
+        },
+        active: function() {
+            $('#bigtext').bigtext();
+        }
+    });
+});
